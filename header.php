@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	<br>
-	<div class="liens" id="ok">
+	<div class="liens" id="liens">
 		<a href="index.php?id=0" id="accueil">
 			<?php if (isset($_GET['id'])){
 				if ($_GET['id'] == 0){ ?>
@@ -28,6 +28,10 @@
 				<?php }
 			?>
 		</a> -
+
+        <li class="menu-deroulant" id="menu" style="list-style-type: none; display: inline;">
+            <a href="#">Massages</a>
+        </li>
 
 		<a href="tarif.php?id=4" id="tarif">
 			<?php if (isset($_GET['id'])){
@@ -50,52 +54,49 @@
 					Contact
 				<?php }
 			?>
-		</a> -
+		</a>
 
-        <li class="menu-deroulant" style="list-style-type: none; display: inline;">
-            <a href="#">Massages</a>
-            <ul class="sous-menu" style="list-style-type: none; width: 100%; margin-top: -0.2%; margin-bottom: 0.5%;">
-                <li>
-                    <a href="massage.php?id=1" id="massage">
-                        <?php if (isset($_GET['id'])){
-                            if ($_GET['id'] == 1){ ?>
-                                <strong>Massage 5 Continents</strong>
-                            <?php } else { ?>
-                                Massage 5 Continents
-                            <?php }} else { ?>
+        <ul class="sous-menu" id="sousMenu" style="list-style-type: none; width: 100%; margin-top: -0.2%; margin-bottom: 0.5%;">
+            <li>
+                <a href="massage.php?id=1" id="massage">
+                    <?php if (isset($_GET['id'])){
+                        if ($_GET['id'] == 1){ ?>
+                            <strong>Massage 5 Continents</strong>
+                        <?php } else { ?>
                             Massage 5 Continents
-                        <?php }
-                        ?>
-                    </a>
-                </li>
-                <li>
-                    <a href="massage_shinzu.php?id=2" id="massage_shinzu">
-                        <?php if (isset($_GET['id'])){
-                            if ($_GET['id'] == 2){ ?>
-                                <strong>Massage Shinzu</strong>
-                            <?php } else { ?>
-                                Massage Shinzu
-                            <?php }} else { ?>
+                        <?php }} else { ?>
+                        Massage 5 Continents
+                    <?php }
+                    ?>
+                </a>
+            </li>
+            <li>
+                <a href="massage_shinzu.php?id=2" id="massage_shinzu">
+                    <?php if (isset($_GET['id'])){
+                        if ($_GET['id'] == 2){ ?>
+                            <strong>Massage Shinzu</strong>
+                        <?php } else { ?>
                             Massage Shinzu
-                        <?php }
-                        ?>
-                    </a>
-                </li>
-                <li>
-                    <a href="massage_happy_zen.php?id=3" id="massage_happy_zen">
-                        <?php if (isset($_GET['id'])){
-                            if ($_GET['id'] == 3){ ?>
-                                <strong>Massage Happy Zen</strong>
-                            <?php } else { ?>
-                                Massage Happy Zen
-                            <?php }} else { ?>
+                        <?php }} else { ?>
+                        Massage Shinzu
+                    <?php }
+                    ?>
+                </a>
+            </li>
+            <li>
+                <a href="massage_happy_zen.php?id=3" id="massage_happy_zen">
+                    <?php if (isset($_GET['id'])){
+                        if ($_GET['id'] == 3){ ?>
+                            <strong>Massage Happy Zen</strong>
+                        <?php } else { ?>
                             Massage Happy Zen
-                        <?php }
-                        ?>
-                    </a>
-                </li>
-            </ul>
-        </li>
+                        <?php }} else { ?>
+                        Massage Happy Zen
+                    <?php }
+                    ?>
+                </a>
+            </li>
+        </ul>
 <!--		<a href="just.php?id=6" id="just">
 			<?php if (isset($_GET['id'])){
 				if ($_GET['id'] == 6){ ?>
@@ -121,6 +122,18 @@
 	</div>
 </main>
 <script>
+    let menu = document.getElementById("menu");
+    let sousMenu = document.getElementById("sousMenu");
+
+    menu.addEventListener("mouseenter", function( event ) {
+        sousMenu.style.maxHeight = "50em";
+    });
+
+    let liens = document.getElementById("liens");
+    liens.addEventListener("mouseleave", function( event ) {
+        sousMenu.style.maxHeight = "0em";
+    });
+
     liens = document.getElementsByClassName('liens')[0]
     if (window.innerWidth < 1700 && window.innerWidth > 1000) {
         liens.style.marginTop = '3em'
