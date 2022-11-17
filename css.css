@@ -51,6 +51,55 @@ hr {
 	border-color: black;
 }
 
+/* Menu deroulant */
+
+.menu-deroulant > a:after{
+	content: '❯';
+	font-size: 15px;
+	margin-left: 7px;
+	display: inline-block;
+}
+
+.sous-menu {
+	width: 100%;
+	text-align: left;
+	border-radius: 2px;
+	overflow: hidden;
+	max-height: 0;
+}
+
+.sous-menu > li > a {
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	align-items: center;
+	display: flex;
+}
+
+@keyframes rotationFleche {
+	0% {
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(90deg);
+	}
+}
+
+.menu-deroulant:hover > a:after{
+	animation: rotationFleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+	100% {
+		max-height: 50em;
+		box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3);
+	}
+}
+
+.menu-deroulant:hover > .sous-menu {
+	animation: apparitionSousMenu 1s forwards;
+}
+
 /* Global */
 body {
 	background-color : #F6E6CF;
@@ -80,6 +129,13 @@ body {
 	width: 30%;
 	height: 30%;
 	border-radius: 15px;
+}
+
+/* Profil */
+
+#image1Profil {
+	width: 20%;
+	height: 20%;
 }
 
 /* Massage  */
@@ -126,6 +182,11 @@ body {
 }
 
 /* Massage HappyZen */
+
+#image0HappyZen {
+	width: 15%;
+	margin-left: 40%;
+}
 
 #image1HappyZen {
 	width: 10%;

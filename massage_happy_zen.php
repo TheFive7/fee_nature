@@ -10,6 +10,8 @@
 	<main>
 		<div class="texte">
             <p>
+                <img src="assets/image2_massageHappyZen.png" id="image0HappyZen" alt="Logo Massage Happy Zen"> <br>
+
                 C'est un massage complet du corps, qui associe un massage/touché du crâne, de la nuque et du dos ainsi que 10 points d'acupression essentiels pour un lâcher prise, un soin complet du crâne jusqu'au bout des orteils. <br><br>
 
                 Un doux drainage des bras, des mains, des jambes et pieds avec les petits <b>bols Kansu</b>, ainsi que l'utilisation du <b>Gua Sha</b> qui dénoue les tensions et qui redonne une luminosité naturelle à votre visage. <br><br>

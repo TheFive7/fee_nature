@@ -25,7 +25,11 @@
                 Enfin, depuis fin juin 2021, je suis diplômée en tant que massothérapeute en massage des 5 continents ,depuis septembre en massage Shinzu et depuis août 2022 en massage HappyZen. <br>
                 C'est avec grand plaisir que j'aimerais vous faire découvrir ces différents massages qui sont un véritable moment de détox, détente, lâcher prise, revitalisation. <br><br>
 
-                Au plaisir de vous accueillir pour un soin.
+                Au plaisir de vous accueillir pour un soin. <br> <br>
+
+                <div style="text-align: center">
+                    <img src="assets/image1_profil.jpg" id="image1Profil" alt="Photographie d'Alexandra CLOG'">
+                </div>
 			</p>
 		</div>
 	</main>

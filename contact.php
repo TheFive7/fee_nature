@@ -13,8 +13,10 @@
 				Pour toute demande d'informations, réservations ou commande de bons cadeaux veuillez m'envoyer un petit message à l'aide du formulaire suivant et je vous répondrais dans les plus bref délais. <br>
 				Ce formulaire ne collecte pas vos données, elles sont uniquement utilisées pour envoyer votre mail.
 			</p>
+
 			<img src="assets/image2_contact.jpg" id="image2Contact" alt="Image Zen">
-			<form action="traitement.php" method="post">
+
+			<form action="traitement.php" id="form" method="post">
 				<fieldset style="width: 50%;">
 					<!-- Civilité -->
 					<label>Civilité :</label>
@@ -82,4 +84,15 @@
 
 	<?php include("footer.php") ?>
 </body>
+<script>
+    form = document.getElementById('form')
+    if (window.innerWidth < 1000) {
+        form.style.paddingLeft = '1%'
+    }
+
+    imageContact = document.getElementById('image2Contact')
+    if (window.innerWidth < 1000) {
+        imageContact.style.display = 'none'
+    }
+</script>
 </html>
